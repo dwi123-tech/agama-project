@@ -296,21 +296,23 @@ body.night-mode .nav-item:hover {
 /* ========== CHAT WIDGET ========== */
 .chat-widget-large {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
   width: 600px;
   max-width: 90vw;
-  height: 520px;
+  height: 500px;
   max-height: 80vh;
-  background: #FFFFFF;
+  background: #FFFEF7;
   border-radius: 28px;
-  box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
   z-index: 2000;
   display: none;
   flex-direction: column;
   overflow: hidden;
-  border: 1px solid #D4C4B0;
+  border: 1px solid #EAD6BB;
 }
 
 .chat-widget-large.show {
