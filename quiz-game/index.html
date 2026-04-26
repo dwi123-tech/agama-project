@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Quiz Game | Bhuwana Santi</title>
+  <link rel="stylesheet" href="css/quiz-style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="quiz-body">
+
+  <!-- Background overlay -->
+  <div class="quiz-bg-pattern"></div>
+
+  <div class="quiz-container" id="quizContainer">
+    
+    <!-- Header Quiz -->
+    <div class="quiz-header">
+      <div class="quiz-nav-top">
+        <button class="btn-back-home" id="backHomeBtn">← Kembali ke Beranda</button>
+        <div class="quiz-stats-panel">
+          <div class="stat-item">
+            <span class="stat-icon">⭐</span>
+            <span id="scoreDisplay">0</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-icon">❤️</span>
+            <span id="livesDisplay">3</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-icon">🏆</span>
+            <span id="highScoreDisplay">0</span>
+          </div>
+        </div>
+      </div>
+      <h1>📋 Quiz Wawasan Nusantara</h1>
+      <p>Uji pemahamanmu tentang Agama, Negara, dan Dasar Konstitusi</p>
+    </div>
+
+    <!-- Pilih Mode Game -->
+    <div class="mode-selection" id="modeSelection">
+      <h2>Pilih Mode Permainan</h2>
+      <div class="mode-cards">
+        <div class="mode-card" data-mode="classic">
+          <div class="mode-icon">📚</div>
+          <h3>Mode Classic</h3>
+          <p>10 pertanyaan acak • 30 detik per soal</p>
+          <div class="mode-badge">⭐ Santai</div>
+        </div>
+        <div class="mode-card" data-mode="survival">
+          <div class="mode-icon">⚔️</div>
+          <h3>Mode Survival</h3>
+          <p>40+ pertanyaan lengkap • 60 detik per soal</p>
+          <div class="mode-badge">🔥 Menantang</div>
+        </div>
+        <div class="mode-card" data-mode="timed">
+          <div class="mode-icon">⚡</div>
+          <h3>Mode Rush</h3>
+          <p>10 pertanyaan acak • 15 detik per soal</p>
+          <div class="mode-badge">🚀 Cepat</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Area Game -->
+    <div class="game-area" id="gameArea" style="display: none;">
+      
+      <div class="game-progress">
+        <div class="progress-info">
+          <span id="questionCounter">Soal 1 / 10</span>
+          <span id="timerDisplay">⏱️ 30s</span>
+        </div>
+        <div class="progress-bar-container">
+          <div class="progress-bar-fill" id="progressBarFill"></div>
+        </div>
+        <div class="lives-indicator" id="livesIndicator">
+          ❤️ ❤️ ❤️
+        </div>
+      </div>
+
+      <div class="question-card">
+        <div class="question-text" id="questionText">
+          Memuat soal...
+        </div>
+      </div>
+
+      <div class="options-grid" id="optionsGrid">
+      </div>
+
+      <div class="powerups-bar" id="powerupsBar">
+        <button class="powerup-btn" id="powerupFifty">🎲 50:50 <span id="fiftyCount">2</span></button>
+        <button class="powerup-btn" id="powerupHint">💡 Petunjuk <span id="hintCount">2</span></button>
+        <button class="powerup-btn" id="powerupSkip">⏩ Skip <span id="skipCount">1</span></button>
+      </div>
+
+      <button class="btn-next" id="nextBtn" style="display: none;">Soal Selanjutnya →</button>
+    </div>
+
+    <!-- Result Area -->
+    <div class="result-area" id="resultArea" style="display: none;">
+      <div class="result-card">
+        <div class="result-icon" id="resultIcon">🏆</div>
+        <h2 id="resultTitle">Quiz Selesai!</h2>
+        <div class="result-stats">
+          <div class="result-stat">
+            <span>✨ Skor Akhir</span>
+            <strong id="finalScore">0</strong>
+          </div>
+          <div class="result-stat">
+            <span>✅ Jawaban Benar</span>
+            <strong id="correctCount">0</strong>
+          </div>
+          <div class="result-stat">
+            <span>📊 Akurasi</span>
+            <strong id="accuracyRate">0%</strong>
+          </div>
+          <div class="result-stat">
+            <span>🏅 Skor Tertinggi</span>
+            <strong id="bestScore">0</strong>
+          </div>
+        </div>
+        <div class="result-message" id="resultMessage"></div>
+        <div class="result-buttons">
+          <button class="btn-play-again" id="playAgainBtn">🔄 Main Lagi</button>
+          <button class="btn-change-mode" id="changeModeBtn">🎮 Ganti Mode</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal untuk Petunjuk -->
+    <div class="modal" id="hintModal">
+      <div class="modal-content">
+        <span class="modal-close" id="closeModal">&times;</span>
+        <h3>💡 Petunjuk ZeTa</h3>
+        <p id="hintText">Petunjuk akan muncul di sini...</p>
+      </div>
+    </div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confettiCanvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; display: none;"></canvas>
+  </div>
+
+  <script src="js/quiz-main.js"></script>
+</body>
+</html>
