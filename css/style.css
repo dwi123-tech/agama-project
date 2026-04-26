@@ -586,6 +586,19 @@ body.night-mode .video-card p {
     height: 50px;
     font-size: 24px;
   }
+
+  .isi {
+    flex-direction: column;
+  }
+
+  .isi img {
+    width: 100%;
+    margin: 0 0 1rem 0;
+  }
+
+  body h2 {
+    text-align: left;
+  }
 }
 
 /* Infografis */
