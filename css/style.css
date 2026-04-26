@@ -481,7 +481,7 @@ body.night-mode .quote-text {
   color: #DBCFA4;
 }
 
-/* Video Section */
+/* ========== VIDEO PEMBELAJARAN DENGAN THUMBNAIL ========== */
 .video-wrapper {
   display: flex;
   gap: 1.5rem;
@@ -491,18 +491,71 @@ body.night-mode .quote-text {
 .video-card {
   flex: 1;
   min-width: 240px;
+  text-align: center;
 }
 
-.video-card iframe {
-  width: 100%;
+.video-link {
+  text-decoration: none;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.video-link:hover {
+  transform: translateY(-5px);
+}
+
+.video-thumbnail {
+  position: relative;
   border-radius: 16px;
+  overflow: hidden;
   aspect-ratio: 16/9;
+  background: #1a1a2e;
+  cursor: pointer;
+}
+
+.thumbnail-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.video-link:hover .thumbnail-img {
+  transform: scale(1.05);
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.video-link:hover .play-button {
+  background: #8B6946;
+  width: 70px;
+  height: 70px;
+  font-size: 36px;
 }
 
 .video-card p {
-  margin-top: 0.5rem;
-  text-align: center;
+  margin-top: 0.75rem;
   font-weight: 500;
+  color: #5C3A1E;
+}
+
+body.night-mode .video-card p {
+  color: #DBCFA4;
 }
 
 .video-note {
@@ -512,6 +565,20 @@ body.night-mode .quote-text {
   opacity: 0.7;
 }
 
+/* Responsive untuk video thumbnail */
+@media (max-width: 600px) {
+  .play-button {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+  
+  .video-link:hover .play-button {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+}
 /* Infografis */
 .infografis-grid {
   display: flex;
