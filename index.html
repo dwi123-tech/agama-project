@@ -1,224 +1,279 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <title>Harmoni Agama & Negara</title>
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
 
-<div class="app-wrapper">
-  <!-- Menu Hamburg -->
-  <button class="menu-btn" id="menuBtn">☰</button>
-  <div class="sidebar-overlay" id="sidebarOverlay"></div>
-  <div class="sidebar-panel" id="sidebarPanel">
-    <button class="close-side" id="closeSidebarBtn">✕</button>
-    <div class="nav-links">
-      <button class="nav-home nav-item">🏠 Beranda</button>
-      <button class="nav-bot nav-item">💬 Tanya Bot ZeTa</button>
-      <button class="nav-quiz nav-item">📋 Quiz Game</button>
-      <button class="nav-feedback nav-item">✍️ Feedback & Saran</button>
-    </div>
-  </div>
-
-  <!-- Fitur Siang Malam -->
-  <div class="theme-toggle" id="dayNightToggle">
-    <span class="toggle-icon" id="toggleIcon">☀️</span>
-    <span id="modeLabel">Siang</span>
-  </div>
-
-  <!-- Bot pojok kiri bawah -->
-  <button class="zeta-bot-float" id="openChatFloat">
-    <span>💬 ZeTa</span>
-    <span class="bubble-icon">Tanya</span>
-  </button>
-
-  <!-- Chat widget besar -->
-  <div class="chat-widget-large" id="chatWidget">
-    <div class="chat-header-large">
-      <span>🤖 ZeTa | Asisten Spiritual & Sejarah Hindu</span>
-      <button class="close-chat" id="closeChatBtn">✕</button>
-    </div>
-    <div class="chat-body-large" id="chatBody">
-      <div class="bot-message">Salam sejahtera! Saya ZeTa, asisten virtual yang siap menjawab pertanyaan seputar hubungan agama dan negara, dasar konstitusi, serta nilai-nilai spiritual. Silakan bertanya!</div>
-    </div>
-    <div class="chat-input-area-large">
-      <input type="text" id="chatInput" placeholder="Tanyakan sesuatu tentang agama, negara, atau UUD 1945...">
-      <button id="sendChatBtn">Kirim</button>
-    </div>
-  </div>
-
-  <!-- Layout Utama: 70% konten + 30% sidebar quiz -->
-  <div class="main-layout">
-    <!-- KOLOM KIRI (70% - MATERI UTAMA) -->
-    <div class="content-main" id="mainContent">
-      <!-- Hero -->
-      <div class="hero-tulisan">
-        <h1>Agama dan Negara</h1>
-        <p>Mewujudkan Tujuan Nasional melalui Harmoni dan Konstitusi</p>
-      </div>
-
-      <!-- ========== MATERI UTAMA BERDASARKAN SOURCE ========== -->
-      <section class="card materi-utama" id="materiSection">
-        
-        <div class="materi-block">
-          <h2>🌿 Agama sebagai Landasan Negara dan Kepribadian</h2>
-          <p>Agama bagi bangsa Indonesia merupakan landasan pembinaan negara dan kepribadian, terutama dalam bidang mental spiritual. Dengan adanya pembinaan beragama, berarti juga adanya kesungguhan akan usaha meningkatkan kesadaran berbangsa dan bernegara di tanah air Indonesia, sekaligus mempertinggi penghayatan dan pengamalan terhadap dasar negara kita yakni Pancasila.</p>
-          <p>Atas dasar kepercayaan bangsa Indonesia terhadap Tuhan Yang Maha Esa yang dinyatakan dalam sila pertama Pancasila dan Pasal 29 ayat 1 dan 2 UUD 1945, maka kehidupan manusia dan masyarakat Indonesia benar-benar dalam hubungannya dengan Tuhan Yang Maha Esa, dengan sesama, dan alam sekitarnya.</p>
-        </div>
-
-        <div class="materi-block">
-          <h2>⚖️ Dasar Konstitusional Kehidupan Beragama</h2>
-          <p>Kehidupan beragama di Indonesia berdasarkan konstitusional. Hal ini ditegaskan dalam rumusan Pancasila yang tersurat pada Pembukaan Undang-Undang Dasar 1945 dan pada Pasal 29.</p>
-          <p class="quote-text">Pasal 29 Undang-Undang Dasar 1945 menegaskan bahwa:<br>
-          <strong>Ayat (1):</strong> Negara berdasarkan atas Ketuhanan Yang Maha Esa.<br>
-          <strong>Ayat (2):</strong> Negara menjamin kemerdekaan tiap-tiap penduduk untuk memeluk agamanya masing-masing dan beribadat menurut agamanya dan kepercayaannya itu.</p>
-          <p>Membaca kedua ayat di atas berarti pemerintah harus mengindahkan kehidupan warganya tentang hidup beragama. Kehidupan beragama itu sangat penting adanya. Ayat (2) lebih menegaskan lagi tentang tugas dan fungsi negara mengenai kehidupan beragama yaitu menjamin kebebasan setiap warga negara Indonesia untuk memeluk agama yang diyakininya dan kepercayaannya itu.</p>
-        </div>
-
-        <div class="materi-block">
-          <h2>🏛️ Tujuan Nasional dan Pembangunan Manusia</h2>
-          <p>Pola Pembangunan Nasional bertujuan untuk mewujudkan suatu masyarakat adil dan makmur yang merata material dan spiritual berdasarkan Pancasila di dalam wadah Negara Republik Indonesia yang merdeka, berdaulat, bersatu, dan berkedaulatan rakyat dalam suasana perikehidupan bangsa yang aman, tenteram, tertib, dinamis dalam lingkungan pergaulan dunia yang merdeka, bersahabat, tertib, dan damai.</p>
-          <p>Jadi, hakikat pembangunan nasional ialah pembangunan manusia Indonesia seutuhnya dan pembangunan seluruh masyarakat Indonesia. Maka, landasan pelaksanaan pembangunan nasional adalah Pancasila dan Undang-Undang Dasar 1945. Oleh karena itu, segala usaha dan kegiatan pembangunan dimanfaatkan sebesar-besarnya bagi kemanusiaan, bagi peningkatan kesejahteraan rakyat, dan bagi pembangunan pribadi warga negara.</p>
-        </div>
-
-        <div class="materi-block">
-          <h2>🤝 Gotong Royong: Kunci Mencapai Cita-Cita Bangsa</h2>
-          <p>Untuk mencapai cita-cita dan mewujudkan tujuan pembangunan nasional, aspirasi-aspirasi bangsa harus merupakan usaha bersama dari bangsa dan seluruh rakyat termasuk yang beragama dan beraliran kepercayaan yang dilakukan secara gotong royong dan dijiwai oleh semangat kekeluargaan.</p>
-          <p>Atas dasar perikehidupan yang subur seperti di atas, kita menjadi memiliki kemantapan, keseimbangan dalam kehidupan lahiriah dan batiniah, serta mempunyai jiwa dinamis dan semangat gotong royong yang meningkat dan berkembang sehingga sanggup melanjutkan perjuangan bangsa.</p>
-        </div>
-
-        <div class="materi-block">
-          <h2>🕉️ Pertalian Erat antara Agama dan Negara</h2>
-          <p>Untuk mewujudkan tujuan nasional seperti apa yang telah dikatakan di atas, antara agama dan negara mempunyai pertalian erat karena tujuan nasional adalah tujuan negara yang garis besarnya adalah mencapai masyarakat adil dan makmur. Kemudian kalau dilihat tujuan agama, seperti agama Hindu misalnya, juga mencapai kebahagiaan lahir dan batin.</p>
-          <p>Maka dari itu, hal ini sudah sejalan adanya sehingga untuk mencapai tujuan nasional harus dilandasi dengan pembangunan mengenai negara termasuk juga dilaksanakan pembangunan agama.</p>
-        </div>
-
-        <div class="materi-block">
-          <h2>📜 Agama sebagai Modal Dasar Pembangunan Nasional</h2>
-          <p>Berdasarkan GBHN, baik Tap MPR IV/MPR/78 maupun MPR/83, dikatakan agama tergolong modal dasar lainnya. Karena itu, pergerakan agama harus diartikan dalam rangka pembangunan nasional. Agama merupakan pendukung serta pendorong kegiatan umatnya untuk ikut serta mewujudkan tujuan nasional.</p>
-          <p>Dalam pengamatan agama jelas ada ibadah. Soal ibadah juga harus dijamin dan dilindungi oleh pemerintah sehingga setiap umat dapat menjalankan ibadah agamanya.</p>
-        </div>
-
-        <div class="materi-block">
-          <h2>🌺 Agama Hindu di Indonesia</h2>
-          <p>Agama Hindu adalah agama yang hidup dan berkembang di Indonesia. Tentang kehidupan umat dan ibadahnya juga harus dijamin dan dilindungi oleh negara dan Pemerintah Republik Indonesia. Mengenai perkembangan agama Hindu diperlakukan sama dengan perkembangan agama-agama lain di tanah air Indonesia, lebih-lebih dalam era pembangunan meningkatkan sumber daya manusia yaitu manusia yang cerdas, terampil, dan bermoral.</p>
-          <p class="quote-text">Bermoral sesuai dengan makna yang tersirat dalam isi Pasal 29 UUD 1945.</p>
-          <p>Indonesia terus berjalan, terus berkembang, terus belajar. Agama dan negara akan selalu berjalan berdampingan. Karena tanpa nilai spiritual, pembangunan bisa kehilangan arah. Dan tanpa negara, nilai-nilai itu sulit diwujudkan dalam kehidupan bersama.</p>
-        </div>
-      </section>
-
-      <!-- Sejarah Organisasi Hindu di Indonesia -->
-      <section class="card">
-        <h2>🕉️ Jejak Organisasi Hindu Nusantara</h2>
-        
-        <div class="materi-block">
-          <h3>PHDI (Parisada Hindu Dharma Indonesia)</h3>
-          <p>PHDI adalah organisasi payung umat Hindu di Indonesia yang lahir pada tahun 1959. Organisasi ini berperan penting dalam memperjuangkan pengakuan Hindu sebagai agama resmi negara. PHDI juga berhasil mengonsolidasikan berbagai tradisi dan menjadikan kitab suci Weda sebagai rujukan utama bagi umat Hindu di Indonesia.</p>
-        </div>
-
-        <div class="materi-block">
-          <h3>Mpu Kuturan dan Tradisi Desa Pakraman</h3>
-          <p>Mpu Kuturan adalah tokoh spiritual yang meletakkan dasar-dasar keagamaan Hindu di Bali. Salah satu warisannya yang masih lestari adalah sistem Desa Pakraman — lembaga spiritual yang menjaga harmoni melalui konsep Tri Hita Karana. Selain itu, organisasi akar rumput seperti Sekaa dan Banjar juga menjadi fondasi sosial keagamaan yang kuat di masyarakat Bali.</p>
-        </div>
-
-        <div class="materi-block">
-          <h3>Organisasi Kerohanian Modern</h3>
-          <p>Di era modern, berbagai organisasi kerohanian seperti Brahma Kumaris cabang Bali dan Sri Sathya Sai Seva turut melestarikan nilai-nilai moral dan meditasi. Organisasi-organisasi ini berperan dalam mendukung kerukunan nasional melalui kegiatan spiritual yang inklusif dan damai.</p>
-        </div>
-
-        <p class="quote-text">"Dari masa kerajaan hingga era reformasi, organisasi Hindu di Indonesia terus menjadi perekat spiritual sekaligus pelopor toleransi."</p>
-      </section>
-
-      <!-- Video pembelajaran -->
-      <section class="card">
-        <h2>📺 Video Pembelajaran</h2>
-        <div class="video-wrapper">
-          <div class="video-card">
-            <a href="https://youtu.be/wt_t67dRALk?si=U7rBJPdjQbxAaC4t" target="_blank" rel="noopener noreferrer" class="video-link">
-              <div class="video-thumbnail">
-                <img src="assets/vid2.png" alt="Pasal 29 UUD 1945 dan Kebebasan Beragama" class="thumbnail-img">
-                <div class="play-button">▶</div>
-              </div>
-              <p>Pasal 29 UUD 1945 dan Kebebasan Beragama</p>
-            </a>
-          </div>
-          <div class="video-card">
-            <a href="https://youtu.be/ONNjdmWBMNo?si=3VElLBIASoW7fMr7" target="_blank" rel="noopener noreferrer" class="video-link">
-              <div class="video-thumbnail">
-                <img src="https://img.youtube.com/vi/ONNjdmWBMNo/maxresdefault.jpg" alt="Sejarah dan Peran PHDI di Indonesia" class="thumbnail-img">
-                <div class="play-button">▶</div>
-              </div>
-              <p>Sejarah dan Peran PHDI di Indonesia</p>
-            </a>
-          </div>
-        </div>
-        <p class="video-note">Klik pada gambar untuk menonton video pembelajaran di YouTube</p>
-      </section>
-      <!-- Infografis visual -->
-      <section class="card">
-        <h2>📊 Infografis Inspiratif</h2>
-        <div class="infografis-grid">
-          <div class="infografis-item">
-            <div class="infografis-img-placeholder">
-              <span class="infografis-icon">📜</span>
-            </div>
-            <h3>Pasal 29 UUD 1945</h3>
-            <p>Negara berdasarkan Ketuhanan Yang Maha Esa<br>Negara menjamin kemerdekaan beragama</p>
-          </div>
-          <div class="infografis-item">
-            <div class="infografis-img-placeholder">
-              <span class="infografis-icon">🏝️</span>
-            </div>
-            <h3>Tri Hita Karana</h3>
-            <p>Harmoni dengan Tuhan, sesama, dan alam</p>
-          </div>
-          <div class="infografis-item">
-            <div class="infografis-img-placeholder">
-              <span class="infografis-icon">⚖️</span>
-            </div>
-            <h3>Tujuan Nasional</h3>
-            <p>Masyarakat adil, makmur, lahir dan batin</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Feedback & saran -->
-      <section class="card feedback-section" id="feedbackSection">
-        <h3>✍️ Saran & Feedback</h3>
-        <textarea id="feedbackText" rows="3" placeholder="Kritik, saran, atau masukan untuk website ini..."></textarea>
-        <button id="submitFeedbackBtn" class="btn-submit">Kirim Saran</button>
-        <p id="feedbackMsg" class="feedback-message"></p>
-      </section>
-      
-      <footer>
-        <p>Bhuwana Santi | Harmoni dalam Keberagaman</p>
-        <p style="font-size: 0.75rem; margin-top: 0.5rem;">"Agama dan negara berjalan berdampingan mewujudkan Indonesia yang adil dan makmur"</p>
-      </footer>
-    </div>
-
-    <!-- KOLOM KANAN (30% - QUIZ COVER) -->
-    <div class="sidebar-quiz">
-      <div class="quiz-cover-card">
-        <div class="quiz-cover-icon">📋</div>
-        <h3>Uji Wawasanmu</h3>
-        <p>Sudah paham dengan materi tentang agama, negara, dan dasar konstitusi? Coba uji pemahamanmu melalui quiz interaktif berikut.</p>
-        <div class="quiz-stats">
-          <span class="stat-badge">3 Mode Game</span>
-          <span class="stat-badge">40+ Soal</span>
-          <span class="stat-badge">Power Ups</span>
-        </div>
-        <button class="btn-start-quiz" id="startQuizBtn">Mulai Quiz Sekarang</button>
-        <div class="quiz-preview">
-          <small>💡 Contoh: Apa bunyi Pasal 29 ayat (1) UUD 1945?</small>
-        </div>
+  <div class="app-wrapper">
+    <!-- Menu Hamburg -->
+    <button class="menu-btn" id="menuBtn">☰</button>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="sidebar-panel" id="sidebarPanel">
+      <button class="close-side" id="closeSidebarBtn">✕</button>
+      <div class="nav-links">
+        <button class="nav-home nav-item">🏠 Beranda</button>
+        <button class="nav-bot nav-item">💬 Tanya Bot ZeTa</button>
+        <button class="nav-quiz nav-item">📋 Quiz Game</button>
+        <button class="nav-feedback nav-item">✍️ Feedback & Saran</button>
       </div>
     </div>
-  </div>
-</div>
 
-<script src="js/main.js"></script>
+    <!-- Fitur Siang Malam -->
+    <div class="theme-toggle" id="dayNightToggle">
+      <span class="toggle-icon" id="toggleIcon">☀️</span>
+      <span id="modeLabel">Siang</span>
+    </div>
+
+    <!-- Bot pojok kiri bawah -->
+    <button class="zeta-bot-float" id="openChatFloat">
+      <span>💬 ZeTa</span>
+      <span class="bubble-icon">Tanya</span>
+    </button>
+
+    <!-- Chat widget besar -->
+    <div class="chat-widget-large" id="chatWidget">
+      <div class="chat-header-large">
+        <span>🤖 ZeTa | Asisten Spiritual & Sejarah Hindu</span>
+        <button class="close-chat" id="closeChatBtn">✕</button>
+      </div>
+      <div class="chat-body-large" id="chatBody">
+        <div class="bot-message">Salam sejahtera! Saya ZeTa, asisten virtual yang siap menjawab pertanyaan seputar
+          hubungan agama dan negara, dasar konstitusi, serta nilai-nilai spiritual. Silakan bertanya!</div>
+      </div>
+      <div class="chat-input-area-large">
+        <input type="text" id="chatInput" placeholder="Tanyakan sesuatu tentang agama, negara, atau UUD 1945...">
+        <button id="sendChatBtn">Kirim</button>
+      </div>
+    </div>
+
+    <!-- Layout Utama: 70% konten + 30% sidebar quiz -->
+    <div class="main-layout">
+      <!-- KOLOM KIRI (70% - MATERI UTAMA) -->
+      <div class="content-main" id="mainContent">
+        <!-- Hero -->
+        <div class="hero-tulisan">
+          <h1>Agama dan Negara</h1>
+          <p>Mewujudkan Tujuan Nasional melalui Harmoni dan Konstitusi</p>
+        </div>
+
+        <!-- ========== MATERI UTAMA BERDASARKAN SOURCE ========== -->
+        <section class="card materi-utama" id="materiSection">
+
+          <div class="materi-block">
+            <h2>🌿 Agama sebagai Landasan Negara dan Kepribadian</h2>
+            <p>Agama bagi bangsa Indonesia merupakan landasan pembinaan negara dan kepribadian, terutama dalam bidang
+              mental spiritual. Dengan adanya pembinaan beragama, berarti juga adanya kesungguhan akan usaha
+              meningkatkan kesadaran berbangsa dan bernegara di tanah air Indonesia, sekaligus mempertinggi penghayatan
+              dan pengamalan terhadap dasar negara kita yakni Pancasila.</p>
+            <p>Atas dasar kepercayaan bangsa Indonesia terhadap Tuhan Yang Maha Esa yang dinyatakan dalam sila pertama
+              Pancasila dan Pasal 29 ayat 1 dan 2 UUD 1945, maka kehidupan manusia dan masyarakat Indonesia benar-benar
+              dalam hubungannya dengan Tuhan Yang Maha Esa, dengan sesama, dan alam sekitarnya.</p>
+          </div>
+
+          <div class="materi-block">
+            <h2>⚖️ Dasar Konstitusional Kehidupan Beragama</h2>
+            <p>Kehidupan beragama di Indonesia berdasarkan konstitusional. Hal ini ditegaskan dalam rumusan Pancasila
+              yang tersurat pada Pembukaan Undang-Undang Dasar 1945 dan pada Pasal 29.</p>
+            <p class="quote-text">Pasal 29 Undang-Undang Dasar 1945 menegaskan bahwa:<br>
+              <strong>Ayat (1):</strong> Negara berdasarkan atas Ketuhanan Yang Maha Esa.<br>
+              <strong>Ayat (2):</strong> Negara menjamin kemerdekaan tiap-tiap penduduk untuk memeluk agamanya
+              masing-masing dan beribadat menurut agamanya dan kepercayaannya itu.
+            </p>
+            <p>Membaca kedua ayat di atas berarti pemerintah harus mengindahkan kehidupan warganya tentang hidup
+              beragama. Kehidupan beragama itu sangat penting adanya. Ayat (2) lebih menegaskan lagi tentang tugas dan
+              fungsi negara mengenai kehidupan beragama yaitu menjamin kebebasan setiap warga negara Indonesia untuk
+              memeluk agama yang diyakininya dan kepercayaannya itu.</p>
+          </div>
+
+          <div class="materi-block">
+            <h2>🏛️ Tujuan Nasional dan Pembangunan Manusia</h2>
+            <p>Pola Pembangunan Nasional bertujuan untuk mewujudkan suatu masyarakat adil dan makmur yang merata
+              material dan spiritual berdasarkan Pancasila di dalam wadah Negara Republik Indonesia yang merdeka,
+              berdaulat, bersatu, dan berkedaulatan rakyat dalam suasana perikehidupan bangsa yang aman, tenteram,
+              tertib, dinamis dalam lingkungan pergaulan dunia yang merdeka, bersahabat, tertib, dan damai.</p>
+            <p>Jadi, hakikat pembangunan nasional ialah pembangunan manusia Indonesia seutuhnya dan pembangunan seluruh
+              masyarakat Indonesia. Maka, landasan pelaksanaan pembangunan nasional adalah Pancasila dan Undang-Undang
+              Dasar 1945. Oleh karena itu, segala usaha dan kegiatan pembangunan dimanfaatkan sebesar-besarnya bagi
+              kemanusiaan, bagi peningkatan kesejahteraan rakyat, dan bagi pembangunan pribadi warga negara.</p>
+          </div>
+
+          <div class="materi-block">
+            <h2>🤝 Gotong Royong: Kunci Mencapai Cita-Cita Bangsa</h2>
+            <p>Untuk mencapai cita-cita dan mewujudkan tujuan pembangunan nasional, aspirasi-aspirasi bangsa harus
+              merupakan usaha bersama dari bangsa dan seluruh rakyat termasuk yang beragama dan beraliran kepercayaan
+              yang dilakukan secara gotong royong dan dijiwai oleh semangat kekeluargaan.</p>
+            <p>Atas dasar perikehidupan yang subur seperti di atas, kita menjadi memiliki kemantapan, keseimbangan dalam
+              kehidupan lahiriah dan batiniah, serta mempunyai jiwa dinamis dan semangat gotong royong yang meningkat
+              dan berkembang sehingga sanggup melanjutkan perjuangan bangsa.</p>
+          </div>
+
+          <div class="materi-block">
+            <h2>🕉️ Pertalian Erat antara Agama dan Negara</h2>
+            <p>Untuk mewujudkan tujuan nasional seperti apa yang telah dikatakan di atas, antara agama dan negara
+              mempunyai pertalian erat karena tujuan nasional adalah tujuan negara yang garis besarnya adalah mencapai
+              masyarakat adil dan makmur. Kemudian kalau dilihat tujuan agama, seperti agama Hindu misalnya, juga
+              mencapai kebahagiaan lahir dan batin.</p>
+            <p>Maka dari itu, hal ini sudah sejalan adanya sehingga untuk mencapai tujuan nasional harus dilandasi
+              dengan pembangunan mengenai negara termasuk juga dilaksanakan pembangunan agama.</p>
+          </div>
+
+          <div class="materi-block">
+            <h2>📜 Agama sebagai Modal Dasar Pembangunan Nasional</h2>
+            <p>Berdasarkan GBHN, baik Tap MPR IV/MPR/78 maupun MPR/83, dikatakan agama tergolong modal dasar lainnya.
+              Karena itu, pergerakan agama harus diartikan dalam rangka pembangunan nasional. Agama merupakan pendukung
+              serta pendorong kegiatan umatnya untuk ikut serta mewujudkan tujuan nasional.</p>
+            <p>Dalam pengamatan agama jelas ada ibadah. Soal ibadah juga harus dijamin dan dilindungi oleh pemerintah
+              sehingga setiap umat dapat menjalankan ibadah agamanya.</p>
+          </div>
+
+          <div class="materi-block">
+            <h2>🌺 Agama Hindu di Indonesia</h2>
+            <p>Agama Hindu adalah agama yang hidup dan berkembang di Indonesia. Tentang kehidupan umat dan ibadahnya
+              juga harus dijamin dan dilindungi oleh negara dan Pemerintah Republik Indonesia. Mengenai perkembangan
+              agama Hindu diperlakukan sama dengan perkembangan agama-agama lain di tanah air Indonesia, lebih-lebih
+              dalam era pembangunan meningkatkan sumber daya manusia yaitu manusia yang cerdas, terampil, dan bermoral.
+            </p>
+            <p class="quote-text">Bermoral sesuai dengan makna yang tersirat dalam isi Pasal 29 UUD 1945.</p>
+            <p>Indonesia terus berjalan, terus berkembang, terus belajar. Agama dan negara akan selalu berjalan
+              berdampingan. Karena tanpa nilai spiritual, pembangunan bisa kehilangan arah. Dan tanpa negara,
+              nilai-nilai itu sulit diwujudkan dalam kehidupan bersama.</p>
+          </div>
+        </section>
+
+        <!-- Sejarah Organisasi Hindu di Indonesia -->
+        <section class="card">
+          <h2>🕉️ Jejak Organisasi Hindu Nusantara</h2>
+
+          <div class="materi-block">
+            <h3>PHDI (Parisada Hindu Dharma Indonesia)</h3>
+            <p>PHDI adalah organisasi payung umat Hindu di Indonesia yang lahir pada tahun 1959. Organisasi ini berperan
+              penting dalam memperjuangkan pengakuan Hindu sebagai agama resmi negara. PHDI juga berhasil
+              mengonsolidasikan berbagai tradisi dan menjadikan kitab suci Weda sebagai rujukan utama bagi umat Hindu di
+              Indonesia.</p>
+          </div>
+
+          <div class="materi-block">
+            <h3>Mpu Kuturan dan Tradisi Desa Pakraman</h3>
+            <p>Mpu Kuturan adalah tokoh spiritual yang meletakkan dasar-dasar keagamaan Hindu di Bali. Salah satu
+              warisannya yang masih lestari adalah sistem Desa Pakraman — lembaga spiritual yang menjaga harmoni melalui
+              konsep Tri Hita Karana. Selain itu, organisasi akar rumput seperti Sekaa dan Banjar juga menjadi fondasi
+              sosial keagamaan yang kuat di masyarakat Bali.</p>
+          </div>
+
+          <div class="materi-block">
+            <h3>Organisasi Kerohanian Modern</h3>
+            <p>Di era modern, berbagai organisasi kerohanian seperti Brahma Kumaris cabang Bali dan Sri Sathya Sai Seva
+              turut melestarikan nilai-nilai moral dan meditasi. Organisasi-organisasi ini berperan dalam mendukung
+              kerukunan nasional melalui kegiatan spiritual yang inklusif dan damai.</p>
+          </div>
+
+          <p class="quote-text">"Dari masa kerajaan hingga era reformasi, organisasi Hindu di Indonesia terus menjadi
+            perekat spiritual sekaligus pelopor toleransi."</p>
+        </section>
+
+        <!-- Video pembelajaran -->
+        <section class="card">
+          <h2>📺 Video Pembelajaran</h2>
+          <div class="video-wrapper">
+            <div class="video-card">
+              <a href="https://youtu.be/wt_t67dRALk?si=U7rBJPdjQbxAaC4t" target="_blank" rel="noopener noreferrer"
+                class="video-link">
+                <div class="video-thumbnail">
+                  <img src="assets/vid2.png" alt="Pasal 29 UUD 1945"
+                    class="thumbnail-img" loading="lazy">
+                  <div class="play-button">▶</div>
+                </div>
+                <p>Pasal 29 UUD 1945 dan Kebebasan Beragama</p>
+              </a>
+            </div>
+            <div class="video-card">
+              <a href="https://youtu.be/ONNjdmWBMNo?si=3VElLBIASoW7fMr7" target="_blank" rel="noopener noreferrer"
+                class="video-link">
+                <div class="video-thumbnail">
+                  <img src="https://img.youtube.com/vi/ONNjdmWBMNo/hqdefault.jpg" alt="Sejarah PHDI"
+                    class="thumbnail-img" loading="lazy">
+                  <div class="play-button">▶</div>
+                </div>
+                <p>Sejarah dan Peran PHDI di Indonesia</p>
+              </a>
+            </div>
+          </div>
+          <p class="video-note">Klik pada gambar untuk menonton video pembelajaran di YouTube</p>
+        </section> <!-- Infografis visual -->
+        <section class="card">
+          <h2>📊 Infografis Inspiratif</h2>
+          <div class="infografis-grid">
+            <div class="infografis-item">
+              <div class="infografis-img-placeholder">
+                <span class="infografis-icon">📜</span>
+              </div>
+              <h3>Pasal 29 UUD 1945</h3>
+              <p>Negara berdasarkan Ketuhanan Yang Maha Esa<br>Negara menjamin kemerdekaan beragama</p>
+            </div>
+            <div class="infografis-item">
+              <div class="infografis-img-placeholder">
+                <span class="infografis-icon">🏝️</span>
+              </div>
+              <h3>Tri Hita Karana</h3>
+              <p>Harmoni dengan Tuhan, sesama, dan alam</p>
+            </div>
+            <div class="infografis-item">
+              <div class="infografis-img-placeholder">
+                <span class="infografis-icon">⚖️</span>
+              </div>
+              <h3>Tujuan Nasional</h3>
+              <p>Masyarakat adil, makmur, lahir dan batin</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Feedback & saran -->
+        <section class="card feedback-section" id="feedbackSection">
+          <h3>✍️ Saran & Feedback</h3>
+          <textarea id="feedbackText" rows="3"
+            placeholder="Kritik, saran, atau masukan untuk website ini..."></textarea>
+          <button id="submitFeedbackBtn" class="btn-submit">Kirim Saran</button>
+          <p id="feedbackMsg" class="feedback-message"></p>
+        </section>
+
+        <footer>
+          <p>Bhuwana Santi | Harmoni dalam Keberagaman</p>
+          <p style="font-size: 0.75rem; margin-top: 0.5rem;">"Agama dan negara berjalan berdampingan mewujudkan
+            Indonesia yang adil dan makmur"</p>
+        </footer>
+      </div>
+
+      <!-- KOLOM KANAN (30% - QUIZ COVER) -->
+      <div class="sidebar-quiz">
+        <div class="quiz-cover-card">
+          <div class="quiz-cover-icon">📋</div>
+          <h3>Uji Wawasanmu</h3>
+          <p>Sudah paham dengan materi tentang agama, negara, dan dasar konstitusi? Coba uji pemahamanmu melalui quiz
+            interaktif berikut.</p>
+          <div class="quiz-stats">
+            <span class="stat-badge">3 Mode Game</span>
+            <span class="stat-badge">40+ Soal</span>
+            <span class="stat-badge">Power Ups</span>
+          </div>
+          <button class="btn-start-quiz" id="startQuizBtn">Mulai Quiz Sekarang</button>
+          <div class="quiz-preview">
+            <small>💡 Contoh: Apa bunyi Pasal 29 ayat (1) UUD 1945?</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
 </body>
+
 </html>
