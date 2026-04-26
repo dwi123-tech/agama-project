@@ -490,7 +490,7 @@ body.night-mode .quote-text {
 
 .video-card {
   flex: 1;
-  min-width: 240px;
+  max-width: 350px;
   text-align: center;
 }
 
