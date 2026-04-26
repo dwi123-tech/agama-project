@@ -13,7 +13,6 @@ body {
   transition:
     background 0.3s ease,
     color 0.3s ease;
-  text-align: justify;
 }
 
 /* Mode Malam - Kontras tetap terjaga */
@@ -95,11 +94,6 @@ body.night-mode .quiz-cover-card h3 {
   .sidebar-quiz {
     flex: 1 1 100%;
     position: static;
-  }
-  .chat-widget-large {
-    width: 90% !important;
-    left: 5% !important;
-    right: 5% !important;
   }
   .hero-tulisan h1 {
     font-size: 1.8rem !important;
@@ -295,14 +289,12 @@ body.night-mode .nav-item:hover {
   font-size: 1.3rem;
 }
 
-/* ========== CHAT WIDGET ========== */
+/* ========== CHAT WIDGET - FIX CENTER ========== */
 .chat-widget-large {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
   width: 600px;
   max-width: 90vw;
   height: 500px;
@@ -310,15 +302,19 @@ body.night-mode .nav-item:hover {
   background: #fffef7;
   border-radius: 28px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  z-index: 2000;
+  z-index: 2000 !important;
   display: none;
   flex-direction: column;
   overflow: hidden;
   border: 1px solid #ead6bb;
+  margin: 0 !important;
+  padding: 0 !important;
+  right: auto !important;
+  bottom: auto !important;
 }
 
 .chat-widget-large.show {
-  display: flex;
+  display: flex !important;
 }
 
 .chat-header-large {
@@ -477,6 +473,7 @@ body.night-mode .chat-body-large {
 .materi-block p {
   color: #3d2b1c;
   line-height: 1.7;
+  text-align: justify;
 }
 
 body.night-mode .card p,
@@ -505,10 +502,12 @@ body.night-mode .quote-text {
   display: flex;
   gap: 1.5rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .video-card {
   flex: 1;
+  min-width: 240px;
   max-width: 350px;
   text-align: center;
 }
@@ -580,77 +579,63 @@ body.night-mode .video-card p {
   opacity: 0.7;
 }
 
-@media (max-width: 600px) {
+/* ========== RESPONSIVE MOBILE ========== */
+@media (max-width: 768px) {
+  .app-wrapper {
+    padding: 1rem;
+  }
+  
+  .hero-tulisan h1 {
+    font-size: 1.5rem !important;
+  }
+  
+  .hero-tulisan p {
+    font-size: 0.9rem;
+  }
+  
+  .isi {
+    flex-direction: column;
+  }
+  
+  .isi img {
+    width: 100%;
+    margin: 0 0 1rem 0;
+  }
+  
+  .card h2 {
+    font-size: 1.3rem;
+    text-align: left;
+  }
+  
+  .card h3 {
+    font-size: 1.1rem;
+  }
+  
+  /* CHAT WIDGET KHUSUS HP - PASTI CENTER */
+  .chat-widget-large {
+    width: 320px !important;
+    max-width: 85% !important;
+    height: 450px !important;
+  }
+  
   .play-button {
     width: 40px;
     height: 40px;
     font-size: 18px;
   }
+  
   .video-link:hover .play-button {
     width: 50px;
     height: 50px;
     font-size: 24px;
   }
-
-  .isi {
-    flex-direction: column;
-  }
-
-  .isi img {
-    width: 100%;
-    margin: 0 0 1rem 0;
-  }
-
-  body h2 {
-    text-align: left;
-  }
-
-  .chat-widget-large {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    width: 600px;
-    max-width: 90vw;
-    height: 500px;
-    max-height: 80vh;
-    background: #fffef7;
-    border-radius: 28px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    z-index: 2000;
-    display: none;
-    flex-direction: column;
-    overflow: hidden;
-    border: 1px solid #ead6bb;
-  }
-}
-
-/* ========== FIX CHAT WIDGET CENTER DI HP ========== */
-@media (max-width: 768px) {
-  .chat-widget-large {
-    position: fixed !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    width: 90% !important;
-    max-width: 350px !important;
-    height: auto !important;
-    max-height: 80vh !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    right: auto !important;
-    bottom: auto !important;
-    inset: auto !important;
-  }
   
-  .chat-widget-large.show {
-    display: flex !important;
+  .video-card {
+    min-width: 100%;
   }
 }
 
-/* Infografis */
+/* ========== Infografis ========== */
 .infografis-grid {
   display: flex;
   flex-wrap: wrap;
@@ -689,7 +674,7 @@ body.night-mode .infografis-item {
   background: #323a4e;
 }
 
-/* Feedback Section */
+/* ========== Feedback Section ========== */
 .feedback-section textarea {
   width: 100%;
   padding: 14px;
@@ -722,6 +707,7 @@ body.night-mode .infografis-item {
   font-size: 0.85rem;
 }
 
+/* ========== Footer ========== */
 footer {
   text-align: center;
   padding: 2rem 0 1rem;
@@ -754,6 +740,7 @@ footer {
 .quiz-cover-card p {
   margin-bottom: 1rem;
   font-size: 0.9rem;
+  text-align: center;
 }
 
 .quiz-stats {
