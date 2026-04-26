@@ -11,6 +11,7 @@ body {
   font-family: 'Poppins', 'Quicksand', 'Segoe UI', sans-serif;
   line-height: 1.6;
   transition: background 0.3s ease, color 0.3s ease;
+  text-align: justify;
 }
 
 /* Mode Malam - Kontras tetap terjaga */
@@ -273,6 +274,19 @@ body.night-mode .nav-item:hover {
 
 .theme-toggle:active {
   transform: scale(0.98);
+}
+
+.isi {
+  display: flex;
+  flex-direction: row;
+  text-align: justify;
+}
+
+.isi img {
+  width: 40%;
+  height: auto;
+  margin-right: 1.5rem;
+  border-radius: 1.5rem;
 }
 
 .toggle-icon {

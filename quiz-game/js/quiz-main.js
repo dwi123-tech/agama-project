@@ -1,55 +1,70 @@
 // ========== QUIZ MAIN - REVISI DENGAN 40+ SOAL ==========
 
 // ========== DATA SOAL BERDASARKAN SOURCE MATERI (40+ SOAL) ==========
+// ========== QUIZ MAIN - PERANAN PEMERINTAH DALAM MEMBINA KEHIDUPAN BERAGAMA ==========
+
+// ========== DATA SOAL (40 SOAL BERDASARKAN MATERI BARU) ==========
 const allQuestions = [
-  // SOAL 1-10: Dasar Agama dan Negara
-  { text: "Agama bagi bangsa Indonesia merupakan landasan pembinaan negara dan kepribadian, terutama dalam bidang...", options: ["Ekonomi", "Mental spiritual", "Politik", "Sosial budaya"], correct: 1, hint: "Ini berkaitan dengan batin dan moral masyarakat." },
-  { text: "Sila pertama Pancasila berbunyi...", options: ["Kemanusiaan yang adil dan beradab", "Persatuan Indonesia", "Kerakyatan yang dipimpin oleh hikmat kebijaksanaan", "Ketuhanan Yang Maha Esa"], correct: 3, hint: "Ini adalah dasar ketuhanan bangsa Indonesia." },
-  { text: "Dasar kepercayaan bangsa Indonesia terhadap Tuhan Yang Maha Esa dinyatakan dalam sila pertama Pancasila dan...", options: ["Pasal 28 UUD 1945", "Pasal 29 ayat 1 dan 2 UUD 1945", "Pasal 30 UUD 1945", "Pasal 31 UUD 1945"], correct: 1, hint: "Pasal ini mengatur tentang agama." },
-  { text: "Pasal 29 ayat (1) UUD 1945 menyatakan bahwa...", options: ["Negara berdasarkan Ketuhanan Yang Maha Esa", "Negara menjamin kemerdekaan beragama", "Presiden pemimpin umat beragama", "Agama resmi adalah Islam"], correct: 0, hint: "Dasar negara dari sisi ketuhanan." },
-  { text: "Pasal 29 ayat (2) UUD 1945 menyatakan bahwa negara menjamin...", options: ["Kemerdekaan berserikat", "Kemerdekaan berpendapat", "Kemerdekaan tiap-tiap penduduk untuk memeluk agamanya", "Kemerdekaan pers"], correct: 2, hint: "Ini tentang kebebasan beragama." },
-  { text: "Atas dasar kepercayaan terhadap Tuhan Yang Maha Esa, kehidupan manusia Indonesia memiliki hubungan dengan...", options: ["Tuhan Yang Maha Esa", "Sesama manusia", "Alam sekitarnya", "Semua benar"], correct: 3, hint: "Tri Hita Karana juga mengajarkan ini." },
-  { text: "Dengan adanya pembinaan beragama, bangsa Indonesia memiliki kesungguhan dalam...", options: ["Meningkatkan kesadaran berbangsa dan bernegara", "Meningkatkan ekonomi", "Membangun infrastruktur", "Memperkuat militer"], correct: 0, hint: "Berkaitan dengan nasionalisme dan spiritual." },
-  { text: "Kehidupan beragama di Indonesia berdasarkan...", options: ["Konstitusional", "Kebiasaan", "Tradisi lokal", "Keputusan presiden"], correct: 0, hint: "Dasar hukum yang tertuang dalam UUD." },
-  { text: "Pemerintah harus mengindahkan kehidupan warganya tentang...", options: ["Politik", "Ekonomi", "Hidup beragama", "Pendidikan"], correct: 2, hint: "Ini adalah kewajiban negara terhadap rakyatnya." },
-  { text: "Negara menjamin kebebasan setiap warga negara Indonesia untuk...", options: ["Memeluk agama yang diyakininya", "Berdemonstrasi", "Membentuk partai politik", "Mengeluarkan pendapat"], correct: 0, hint: "Pasal 29 ayat 2 UUD 1945." },
+  // SOAL 1-10: Dasar Negara dan Konstitusi
+  { text: "Dasar Negara Republik Indonesia adalah...", options: ["UUD 1945", "Pancasila", "Tap MPR", "Proklamasi"], correct: 1, hint: "Ini adalah dasar falsafah bangsa Indonesia." },
+  { text: "Sila pertama Pancasila berbunyi...", options: ["Kemanusiaan yang adil dan beradab", "Persatuan Indonesia", "Ketuhanan Yang Maha Esa", "Keadilan sosial bagi seluruh rakyat Indonesia"], correct: 2, hint: "Berhubungan dengan keyakinan kepada Tuhan." },
+  { text: "Pengaturan tentang agama dalam UUD 1945 terdapat pada...", options: ["Bab 11", "Bab 10", "Bab 12", "Bab 13"], correct: 0, hint: "Bab tentang agama." },
+  { text: "Pasal yang mengatur tentang agama dalam UUD 1945 adalah...", options: ["Pasal 28", "Pasal 29", "Pasal 30", "Pasal 31"], correct: 1, hint: "Pasal tentang jaminan kebebasan beragama." },
+  { text: "Pasal 29 ayat (1) UUD 1945 menyatakan bahwa...", options: ["Negara menjamin kemerdekaan beragama", "Negara berdasarkan Ketuhanan Yang Maha Esa", "Presiden pemimpin umat beragama", "Agama resmi adalah Islam"], correct: 1, hint: "Dasar negara dari sisi ketuhanan." },
+  { text: "Pasal 29 ayat (2) UUD 1945 menyatakan bahwa negara menjamin...", options: ["Kemerdekaan berserikat", "Kemerdekaan berpendapat", "Kemerdekaan tiap-tiap penduduk untuk memeluk agamanya", "Kemerdekaan pers"], correct: 2, hint: "Jaminan kebebasan beribadah." },
+  { text: "Makna Bab 11 UUD 1945 adalah sebagai uraian dasar dari...", options: ["Sila pertama Pancasila", "Sila kedua Pancasila", "Sila ketiga Pancasila", "Sila keempat Pancasila"], correct: 0, hint: "Ketuhanan Yang Maha Esa." },
+  { text: "UUD 1945 adalah singkatan dari...", options: ["Undang-Undang Dasar 1945", "Undang-Undang Dasar Negara 1945", "Undang-Undang Dasar Republik Indonesia 1945", "Undang-Undang Dewan 1945"], correct: 0, hint: "Konstitusi dasar Indonesia." },
+  { text: "Pancasila sebagai dasar negara terdiri dari berapa sila?", options: ["3", "4", "5", "6"], correct: 2, hint: "Jumlah sila dalam Pancasila." },
+  { text: "Sila pertama Pancasila berkaitan erat dengan masalah...", options: ["Kemanusiaan", "Persatuan", "Ketuhanan", "Kerakyatan"], correct: 2, hint: "Keyakinan kepada Tuhan." },
 
-  // SOAL 11-20: Tujuan Nasional dan Pembangunan
-  { text: "Pola Pembangunan Nasional bertujuan untuk mewujudkan masyarakat...", options: ["Kaya raya", "Adil dan makmur yang merata material dan spiritual", "Modern dan maju", "Industri yang kuat"], correct: 1, hint: "Berdasarkan Pancasila." },
-  { text: "Hakikat pembangunan nasional adalah...", options: ["Pembangunan infrastruktur", "Pembangunan manusia Indonesia seutuhnya", "Pembangunan ekonomi", "Pembangunan teknologi"], correct: 1, hint: "Manusia adalah subjek dan objek pembangunan." },
-  { text: "Landasan pelaksanaan pembangunan nasional adalah...", options: ["Pancasila dan UUD 1945", "GBHN", "Tap MPR", "Keputusan Presiden"], correct: 0, hint: "Dasar negara dan konstitusi." },
-  { text: "Segala usaha dan kegiatan pembangunan dimanfaatkan sebesar-besarnya bagi...", options: ["Kemanusiaan", "Peningkatan kesejahteraan rakyat", "Pembangunan pribadi warga negara", "Semua benar"], correct: 3, hint: "Tujuan mulia pembangunan." },
-  { text: "Untuk mencapai cita-cita pembangunan nasional, aspirasi bangsa harus merupakan...", options: ["Usaha pemerintah saja", "Usaha bersama seluruh rakyat", "Usaha swasta", "Usaha asing"], correct: 1, hint: "Gotong royong adalah kunci." },
-  { text: "Pembangunan harus dilakukan secara...", options: ["Individual", "Gotong royong", "Kompetitif", "Eksklusif"], correct: 1, hint: "Dijiwai semangat kekeluargaan." },
-  { text: "Tujuan nasional garis besarnya adalah mencapai masyarakat...", options: ["Adil dan makmur", "Modern dan maju", "Berkembang", "Mandiri"], correct: 0, hint: "Cita-cita bangsa Indonesia." },
-  { text: "Tujuan agama Hindu adalah mencapai...", options: ["Kekayaan dunia", "Kekuasaan", "Kebahagiaan lahir dan batin", "Popularitas"], correct: 2, hint: "Moksha atau kebahagiaan sejati." },
-  { text: "Antara agama dan negara mempunyai pertalian erat karena...", options: ["Tujuannya sama", "Saling bertentangan", "Terpisah", "Tidak berhubungan"], correct: 0, hint: "Sama-sama ingin masyarakat bahagia." },
-  { text: "Untuk mencapai tujuan nasional harus dilandasi dengan pembangunan negara dan juga...", options: ["Pembangunan agama", "Pembangunan militer", "Pembangunan teknologi", "Pembangunan politik"], correct: 0, hint: "Spiritual juga penting." },
+  // SOAL 11-20: Agama dan Aliran Kepercayaan
+  { text: "Di Indonesia, penganut penghayatan terhadap Tuhan Yang Maha Esa lebih dikenal dengan sebutan...", options: ["Agama resmi", "Aliran kepercayaan", "Sekte", "Organisasi massa"], correct: 1, hint: "Bukan agama formal." },
+  { text: "Aliran kepercayaan jumlahnya di Indonesia sangat...", options: ["Sedikit", "Banyak", "Tidak ada", "Terbatas"], correct: 1, hint: "Keberagaman kepercayaan lokal." },
+  { text: "Pemerintah mempunyai peranan penting dalam membina kehidupan beragama karena...", options: ["Banyaknya agama dan aliran kepercayaan", "Sedikitnya pemeluk agama", "Tidak ada konflik", "Semua agama sama"], correct: 0, hint: "Keberagaman perlu pembinaan." },
+  { text: "Yang dimaksud dengan aliran kepercayaan di Indonesia adalah...", options: ["Agama resmi negara", "Penganut penghayatan terhadap Ketuhanan Yang Maha Esa", "Organisasi politik", "Lembaga pendidikan"], correct: 1, hint: "Bukan agama formal." },
+  { text: "Masalah Ketuhanan erat kaitannya dengan...", options: ["Politik", "Ekonomi", "Agama", "Budaya"], correct: 2, hint: "Hubungan manusia dengan Tuhan." },
+  { text: "Tidak semua hal yang perilakunya berkaitan dengan Ketuhanan dapat disebut...", options: ["Budaya", "Adat", "Agama", "Tradisi"], correct: 2, hint: "Ada batasan tertentu." },
+  { text: "Untuk mendayagunakan semua umat, pemerintah mempunyai peranan...", options: ["Kecil", "Tidak penting", "Penting", "Bebas"], correct: 2, hint: "Negara hadir membina." },
+  { text: "Aliran kepercayaan di Indonesia disebut juga dengan...", options: ["Satu nama saja", "Banyak nama", "Tidak bernama", "Nama internasional"], correct: 1, hint: "Keberagaman sebutan lokal." },
+  { text: "Pemerintah perlu membina kehidupan beragama agar semua umat dapat...", options: ["Bersaing", "Didayagunakan", "Dibedakan", "Dipisahkan"], correct: 1, hint: "Optimalisasi potensi umat." },
+  { text: "Di Indonesia, selain agama resmi juga terdapat...", options: ["Aliran kepercayaan", "Agama asing", "Agama baru", "Sekte terlarang"], correct: 0, hint: "Penghayat kepercayaan." },
 
-  // SOAL 21-30: GBHN dan Agama sebagai Modal
-  { text: "Berdasarkan GBHN (Tap MPR IV/MPR/78 maupun MPR/83), agama tergolong...", options: ["Modal dasar lainnya", "Penghambat pembangunan", "Beban negara", "Tidak penting"], correct: 0, hint: "Agama adalah aset bangsa." },
-  { text: "Pergerakan agama harus diartikan dalam rangka...", options: ["Pembangunan nasional", "Kepentingan politik", "Kekuasaan", "Keuntungan pribadi"], correct: 0, hint: "Agama mendukung pembangunan." },
-  { text: "Agama merupakan pendukung serta pendorong kegiatan umatnya untuk...", options: ["Ikut serta mewujudkan tujuan nasional", "Mementingkan diri sendiri", "Berpolitik praktis", "Mengumpulkan harta"], correct: 0, hint: "Umat beragama berkontribusi untuk bangsa." },
-  { text: "Dalam pengamatan agama jelas ada...", options: ["Ibadah", "Politik", "Ekonomi", "Hukum"], correct: 0, hint: "Inti dari beragama." },
-  { text: "Soal ibadah harus dijamin dan dilindungi oleh...", options: ["Pemerintah", "Masyarakat", "Swasta", "Luar negeri"], correct: 0, hint: "Negara hadir melindungi." },
-  { text: "Agama Hindu adalah agama yang...", options: ["Hidup dan berkembang di Indonesia", "Baru masuk ke Indonesia", "Tidak diakui di Indonesia", "Hanya untuk etnis tertentu"], correct: 0, hint: "Salah satu agama resmi di Indonesia." },
-  { text: "Perkembangan agama Hindu di Indonesia diperlakukan...", options: ["Sama dengan agama-agama lain", "Lebih istimewa", "Kurang diperhatikan", "Tidak diatur"], correct: 0, hint: "Setara di mata hukum." },
-  { text: "Dalam era pembangunan, yang ditingkatkan adalah sumber daya manusia yang...", options: ["Cerdas, terampil, dan bermoral", "Kaya raya", "Berkuasa", "Terkenal"], correct: 0, hint: "SDM unggul dan beretika." },
-  { text: "Bermoral sesuai dengan makna yang tersirat dalam isi...", options: ["Pasal 28 UUD 1945", "Pasal 29 UUD 1945", "Pasal 30 UUD 1945", "Pasal 31 UUD 1945"], correct: 1, hint: "Pasal tentang agama." },
-  { text: "Negara berdasarkan atas Ketuhanan Yang Maha Esa ditegaskan dalam...", options: ["Pembukaan UUD 1945 dan Pasal 29", "Ketetapan MPR", "Peraturan Pemerintah", "Keputusan Presiden"], correct: 0, hint: "Dasar konstitusional." },
+  // SOAL 21-30: Kewajiban Pemerintah
+  { text: "Tugas pemerintah dalam membina kehidupan beragama berdasarkan penjelasan UUD 1945 tentang sila pertama dan Pasal 29 adalah...", options: ["Membiarkan", "Menjamin, melindungi, membina", "Melarang", "Mengabaikan"], correct: 1, hint: "Kewajiban aktif negara." },
+  { text: "Pemerintah menjamin kebebasan tiap penduduk untuk...", options: ["Memeluk agama dan beribadat", "Berdemonstrasi", "Mogok kerja", "Membentuk partai"], correct: 0, hint: "Pasal 29 ayat 2." },
+  { text: "Pemerintah berkewajiban melindungi kehidupan beragama agar tampak...", options: ["Rukun dan bergairah", "Bertentangan", "Terpecah", "Individualis"], correct: 0, hint: "Suasana harmonis." },
+  { text: "Negara tidak mengatur dan mencampuri urusan...", options: ["Norma agama dan ibadah secara khusus", "Politik", "Ekonomi", "Pendidikan"], correct: 0, hint: "Ini hak mutlak setiap pemeluk agama." },
+  { text: "Urusan norma agama atau ajaran agama serta ibadahnya secara khusus adalah hak...", options: ["Pemerintah", "Negara", "Setiap orang menurut keyakinannya", "MUI"], correct: 2, hint: "Prinsip kebebasan beragama." },
+  { text: "Negara menjamin sepenuhnya akan...", options: ["Kemakmuran", "Kehidupan beragama", "Kekuasaan", "Kekayaan"], correct: 1, hint: "Fokus pada spiritual." },
+  { text: "Pemerintah memberikan bimbingan dan pengarahan agar kehidupan beragama serasi dengan kebijakan pemerintah berdasarkan...", options: ["UUD 1945", "Pancasila", "Tap MPR", "Keputusan Presiden"], correct: 1, hint: "Dasar negara." },
+  { text: "Peranan pemerintah dalam membina kehidupan beragama bertujuan agar semua umat dapat...", options: ["Ikut serta aktif mewujudkan tujuan pembangunan nasional", "Berdiam diri", "Berpikir sendiri", "Meninggalkan kewajiban"], correct: 0, hint: "Partisipasi dalam pembangunan." },
+  { text: "Pemerintah wajib mengusahakan agar kehidupan beragama tumbuh dengan...", options: ["Subur", "Layu", "Tidak berkembang", "Mandek"], correct: 0, hint: "Dinamis dan progresif." },
+  { text: "Kebijakan pemerintah dalam membina kehidupan beragama harus serasi dengan pembinaan...", options: ["Kehidupan berbangsa dan bernegara", "Ekonomi", "Politik praktis", "Hubungan luar negeri"], correct: 0, hint: "Holistik." },
 
-  // SOAL 31-40: Nilai-Nilai Spiritual dan Implementasi
-  { text: "Kehidupan beragama yang subur membuat bangsa Indonesia memiliki...", options: ["Kemantapan dan keseimbangan lahiriah dan batiniah", "Kekayaan melimpah", "Kekuasaan besar", "Teknologi maju"], correct: 0, hint: "Seimbang antara duniawi dan ukhrawi." },
-  { text: "Jiwa dinamis dan semangat gotong royong yang meningkat dapat melanjutkan...", options: ["Perjuangan bangsa", "Usaha pribadi", "Kepentingan kelompok", "Bisnis keluarga"], correct: 0, hint: "Semangat kolektif bangsa." },
-  { text: "Negara menjamin kemerdekaan tiap-tiap penduduk untuk beribadat menurut...", options: ["Agamanya dan kepercayaannya", "Peraturan pemerintah", "Kebiasaan setempat", "Tradisi leluhur"], correct: 0, hint: "Pasal 29 ayat 2 UUD 1945." },
-  { text: "Tugas dan fungsi negara mengenai kehidupan beragama adalah...", options: ["Menjamin kebebasan beragama", "Menentukan agama resmi", "Melarang agama tertentu", "Memaksakan satu agama"], correct: 0, hint: "Sebagai pelindung." },
-  { text: "Pemerintah harus menjamin setiap umat dapat...", options: ["Menjalankan ibadah agamanya", "Berkuasa", "Menguasai negara", "Menghimpun kekayaan"], correct: 0, hint: "Hak konstitusional." },
-  { text: "Hakikat pembangunan nasional adalah pembangunan...", options: ["Manusia Indonesia seutuhnya", "Gedung pencakar langit", "Jalan tol", "Bandara internasional"], correct: 0, hint: "Bukan fisik semata." },
-  { text: "Pembangunan manusia Indonesia seutuhnya mencakup aspek...", options: ["Material dan spiritual", "Hanya material", "Hanya spiritual", "Hanya ekonomi"], correct: 0, hint: "Seimbang lahir batin." },
-  { text: "Masyarakat adil dan makmur yang merata material dan spiritual berdasarkan...", options: ["Pancasila", "Kapitalisme", "Komunisme", "Liberalisme"], correct: 0, hint: "Dasar negara Indonesia." },
-  { text: "Usaha dan kegiatan pembangunan dijiwai oleh semangat...", options: ["Kekeluargaan", "Individualisme", "Materialisme", "Sekularisme"], correct: 0, hint: "Gotong royong." },
-  { text: "Kehidupan beragama di Indonesia dijamin oleh...", options: ["Negara berdasarkan konstitusi", "Masyarakat internasional", "Lembaga swasta", "Orang kaya"], correct: 0, hint: "Pasal 29 UUD 1945." }
+  // SOAL 31-40: Peran Aktif dan Implementasi
+  { text: "Tujuan akhir dari peranan pemerintah dalam membina kehidupan beragama adalah...", options: ["Mewujudkan tujuan pembangunan nasional", "Menguasai umat", "Membatasi kebebasan", "Menghapus perbedaan"], correct: 0, hint: "Mendukung cita-cita nasional." },
+  { text: "Sikap yang harus dimiliki umat beragama dalam pembangunan nasional adalah...", options: ["Aktif ikut serta", "Pasif", "Acuh tak acuh", "Menghalangi"], correct: 0, hint: "Partisipasi aktif." },
+  { text: "Kebebasan beragama di Indonesia memiliki batasan yaitu...", options: ["Tidak mengganggu ketertiban umum", "Bebas mutlak", "Tanpa aturan", "Sesuka hati"], correct: 0, hint: "Ada rambu-rambu sosial." },
+  { text: "Negara bertindak sebagai... dalam kehidupan beragama di Indonesia.", options: ["Fasilitator dan pelindung", "Pemaksa", "Penguasa mutlak", "Penghalang"], correct: 0, hint: "Peran mendukung." },
+  { text: "Salah satu bentuk peran aktif pemerintah dalam kehidupan beragama adalah...", options: ["Membangun tempat ibadah", "Melarang ibadah", "Memaksakan agama tertentu", "Mengabaikan umat"], correct: 0, hint: "Dukungan infrastruktur." },
+  { text: "Kerukunan umat beragama sangat penting untuk mewujudkan...", options: ["Perpecahan", "Stabilitas nasional", "Konflik horizontal", "Kekacauan"], correct: 1, hint: "Kondisi damai." },
+  { text: "Dalam membina kehidupan beragama, pemerintah harus bersikap...", options: ["Netral dan adil", "Memihak satu agama", "Diskriminatif", "Apatis"], correct: 0, hint: "Tidak pilih kasih." },
+  { text: "Negara menjamin kebebasan beribadah bagi setiap penduduk sesuai dengan...", options: ["Agama dan kepercayaannya", "Peraturan pemerintah", "Keinginan presiden", "Kebiasaan setempat"], correct: 0, hint: "Pasal 29 ayat 2 UUD 1945." },
+  { text: "Pemerintah berperan dalam mencegah... antaragama.", options: ["Konflik", "Kerjasama", "Dialog", "Toleransi"], correct: 0, hint: "Mediasi dan pembinaan." },
+  { text: "Dengan adanya peranan aktif pemerintah, diharapkan tercipta kehidupan beragama yang...", options: ["Rukun, damai, dan harmonis", "Kacau dan tidak teratur", "Individualistis", "Tertutup"], correct: 0, hint: "Suasana kondusif." }
 ];
+
+// Tambah 10 soal lagi untuk genap 50 soal (opsional)
+const additionalQuestions = [
+  { text: "Sila pertama Pancasila menjadi dasar bagi...", options: ["Kebebasan beragama", "Kebebasan berpendapat", "Kebebasan pers", "Kebebasan berserikat"], correct: 0, hint: "Landasan konstitusional beragama." },
+  { text: "Pemerintah wajib menciptakan lingkungan yang... bagi perkembangan kehidupan beragama.", options: ["Kondusif", "Tidak ramah", "Mencekik", "Terbatas"], correct: 0, hint: "Mendukung." },
+  { text: "Umat beragama diharapkan dapat... tujuan pembangunan nasional.", options: ["Mewujudkan", "Menghalangi", "Mengabaikan", "Menentang"], correct: 0, hint: "Sinergi." },
+  { text: "Negara tidak boleh... urusan internal agama.", options: ["Mencampuri", "Melindungi", "Menjamin", "Membina"], correct: 0, hint: "Prinsip non-intervensi." },
+  { text: "Kehidupan beragama yang rukun akan mendukung... bangsa.", options: ["Stabilitas", "Kehancuran", "Perpecahan", "Kemunduran"], correct: 0, hint: "Kondisi aman." }
+];
+
+// Gabungkan semua soal
+const finalQuestions = [...allQuestions, ...additionalQuestions];
 
 // ========== VARIABEL GLOBAL ==========
 let currentMode = null;
