@@ -289,16 +289,19 @@ body.night-mode .nav-item:hover {
   font-size: 1.3rem;
 }
 
-/* ========== CHAT WIDGET - FIX CENTER ========== */
+/* ========== CHAT WIDGET - FORCE CENTER (PASTI JADI) ========== */
 .chat-widget-large {
   position: fixed !important;
   top: 50% !important;
   left: 50% !important;
   transform: translate(-50%, -50%) !important;
-  width: 600px;
-  max-width: 90vw;
-  height: 500px;
-  max-height: 80vh;
+  -webkit-transform: translate(-50%, -50%) !important;
+  -moz-transform: translate(-50%, -50%) !important;
+  -ms-transform: translate(-50%, -50%) !important;
+  width: 600px !important;
+  max-width: 90vw !important;
+  height: 500px !important;
+  max-height: 80vh !important;
   background: #fffef7;
   border-radius: 28px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
@@ -311,8 +314,15 @@ body.night-mode .nav-item:hover {
   padding: 0 !important;
   right: auto !important;
   bottom: auto !important;
+  left: 50% !important;
+  right: auto !important;
+  top: 50% !important;
+  bottom: auto !important;
 }
 
+.chat-widget-large.show {
+  display: flex !important;
+}
 .chat-widget-large.show {
   display: flex !important;
 }
@@ -584,52 +594,57 @@ body.night-mode .video-card p {
   .app-wrapper {
     padding: 1rem;
   }
-  
+
   .hero-tulisan h1 {
     font-size: 1.5rem !important;
   }
-  
+
   .hero-tulisan p {
     font-size: 0.9rem;
   }
-  
+
   .isi {
     flex-direction: column;
   }
-  
+
   .isi img {
     width: 100%;
     margin: 0 0 1rem 0;
   }
-  
+
   .card h2 {
     font-size: 1.3rem;
     text-align: left;
   }
-  
+
   .card h3 {
     font-size: 1.1rem;
   }
-  
+
   /* CHAT WIDGET KHUSUS HP - PASTI CENTER */
   .chat-widget-large {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    -webkit-transform: translate(-50%, -50%) !important;
     width: 320px !important;
     max-width: 85% !important;
     height: 450px !important;
   }
-  
+
   .play-button {
     width: 40px;
     height: 40px;
     font-size: 18px;
   }
-  
+
   .video-link:hover .play-button {
     width: 50px;
     height: 50px;
     font-size: 24px;
   }
-  
+
   .video-card {
     min-width: 100%;
   }
